@@ -1,2 +1,4 @@
 *-downloads/
 *.session
+.vscode
+__pycache__
