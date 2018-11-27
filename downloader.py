@@ -38,20 +38,24 @@ def handle():
             books = list(filter(filter_by_ext, books))
 
         total = len(books)
-        print(f"Total number of books {total}")
+        print("Total number of books {}".format(total))
 
-        for i, book in enumerate(books):
-            book_name = get_name(book)
-            print(f"Downloading {i + 1} of {total} | {book_name}")
+        print("Start downloading books? y/n")
+        agree = input()
 
-            book.download_media(args.path + book_name)
+        if agree == "y":
+            for i, book in enumerate(books):
+                book_name = get_name(book)
+                print("Downloading {index} of {total} | {name}".format(index=i+1, total=total, name=book_name))
+
+                book.download_media(args.path + book_name)
 
     finally:
         client.disconnect()
 
 
 API_ID = os.environ["TG_API_ID"]
-API_KEY = os.environ["TG_API_KEY"]
+API_KEY = os.environ["TG_API_HASH"]
 
 if __name__ == "__main__":
     handle()

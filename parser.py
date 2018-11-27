@@ -13,7 +13,7 @@ parser.add_argument("-c", "--channel", type=str, default=CHANNEL, required=False
                     help="Channel to search in")
 parser.add_argument("-kw", "--key-words", nargs="+", default=KEY_WORDS, required=False,
                     help="Key words to search, ex: 'Computer vision' 'Machine learning'")
-parser.add_argument("-e", "--extensions", nargs="+", required=False,
+parser.add_argument("-e", "--extensions", nargs="+", default=EXTENSIONS, required=False,
                     help="File extensions")
 
 args = parser.parse_args()
