@@ -1,5 +1,7 @@
 # Book downloader from Telegram channels #
 
+CLI for searching and downloading books from Telegram channels
+
 ## Setup ##
 
 ### Add environment variables ###
