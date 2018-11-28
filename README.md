@@ -22,9 +22,9 @@ python books.py \
 -e .pdf
 ```
 
-+ -a/--action - Action to take: **download** or **list**\
-+ -c/--channel - Telegram channel name\
-+ -kw/--key-words - Keywords to search for, ex: **'Computer vision'** **'Machine learning'**\
++ -a/--action - Action to take: **download** or **list**
++ -c/--channel - Telegram channel name
++ -kw/--key-words - Keywords to search for, ex: **'Computer vision'** **'Machine learning'**
 + -e/--extensions - Book extensions, ex: pdf epub etc.
 
 ### Note ###
