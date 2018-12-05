@@ -17,7 +17,10 @@ parser.add_argument("-kw", "--key-words", nargs="+", default=KEY_WORDS, required
                     help="Key words to search, ex: 'Computer vision' 'Machine learning'")
 parser.add_argument("-e", "--extensions", nargs="+", default=EXTENSIONS, required=False,
                     help="File extensions")
+parser.add_argument("-p", "--path", type=str, required=False,
+                    help="Directory to download books into")
 
 args = parser.parse_args()
 args.key_words = list(map(lambda x: x.lower(), args.key_words))
-args.path = args.channel + "-downloads/"
+if args.path is None:
+    args.path = args.channel + "-downloads/"
