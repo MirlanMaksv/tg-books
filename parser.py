@@ -24,5 +24,5 @@ args = parser.parse_args()
 args.key_words = list(map(lambda x: x.lower(), args.key_words))
 if args.path is None:
     args.path = args.channel + "-downloads/"
-else if not args.path.endswith("/"):
-    args.path = args.path += "/"
+elif not args.path.endswith("/"):
+    args.path += "/"
